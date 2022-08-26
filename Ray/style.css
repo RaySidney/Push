@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@font-face {
+    font-family:'MagmaWave';
+    src: url(meusite/MagmaWave\ Caps.otf);
+}
+/*================================================Mobile First=============================================*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --Branco:#E0DCD1;
+    --Cinza:#615F5A;
+    --Creme:#E6CF91;
+}
+body{
+    background: url(meusite/fundocel.jpg) no-repeat;
+    background-size: cover;
+}
+header{
+    background-color: rgba(230, 207, 145, 0.800);
+    box-shadow: 0px 0px 20px #ac9149;
+    padding: 1px;
+}
+header h1{
+    font-family: 'MagmaWave', cursive, monospace;
+    text-align: center;
+    font-size: 3em;
+    padding: 10px;
+}
+
+span#menu{
+    background-color: rgba(201, 170, 84, 0.800);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+span#menu:hover{
+    background-color: white;
+    color: black;
+}
+header ul{
+    font-weight: bolder;
+    text-shadow: 1px 1px #615F5A;
+    
+}
+
+header li{
+    font-family: 'MagmaWave', cursive, monospace;
+    background-color: rgba(201, 170, 84, 0.800);
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 1em;
+}
+header li:hover{
+    background-color: rgba(172, 146, 73, 0.800)c0;
+}
+menu{
+
+    display: none;
+}
+
+menu a{
+    
+    text-decoration: none;
+    color: white;
+    
+}
+main{
+    background-color: var(--Branco);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    text-indent: 1em;
+    font-size: 0.75em;
+}
+main h2, main h3{
+    text-indent: 0em;
+    padding: 5px;
+}
+::-webkit-scrollbar{
+    width: 0%;
+}
+main a {
+    text-decoration: none;
+    color: #0024f0b4;
+}
+main ul{
+    padding: 10px;
+}
+main ul li{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+.musica{
+    text-align: center;
+}
+div.img{
+    width: 15vw;
+
+}
+footer{
+    background-color: var(--Creme);
+    color: var(black);
+    font-weight: bolder;
+    text-align: center;
+}
+div.galeria{
+    text-align: center;
+}
+/*=========================================================================================================*/
+@media only screen and (min-width: 992px) {
+    body{
+        background: url(meusite/fundopc.jpg) no-repeat;
+        background-size: cover;
+    }
+    main{
+        width: 50vw;
+        font-size: 1em;
+    }
+    span#menu{
+        display: none;
+    }
+    menu{
+        display: block;
+        margin: 10px;
+    }
+    header li{
+        display: inline-block;
+        border-radius: 8px;
+        box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.425);
+        
+    }
+    header li:hover{
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        transform: translate(-5%, -5%);
+    }
+    li#direita{
+        transform: translate(760%, 0%);
+        
+    }
+    @keyframes example {
+        0%   {background-color: rgba(0, 255, 255, 0.800);}
+        25%  {background-color: rgba(218, 165, 32, 0.800);}
+        50%  {background-color: rgba(255, 0, 0, 0.800);}
+        100% {background-color: rgba(172, 255, 47, 0.800);}
+    }
+
+}
